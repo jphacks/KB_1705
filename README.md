@@ -3,7 +3,7 @@
 [![Product Name](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://www.youtube.com/channel/UC4PtjOfZTbVp9DwtJv82Lzg)
 
 ## 製品概要
-こみゅ X Tech（X → 今回皆さんが選定した好きな言葉に書き換えてください）
+こみゅ Tech
 
 ### 背景（製品開発のきっかけ、課題等）
 - こんかいのプロダクトの開発に至った背景
@@ -79,11 +79,7 @@
 * においセンサー
 * Bluetooth (FN-42 i/rm)
 
-### 研究内容・事前開発プロダクト（任意）
-ご自身やチームの研究内容や、事前に持ち込みをしたプロダクトがある場合は、こちらに実績なども含め記載をして下さい。
-
-* 
-* 
+### 研究内容・事前開発プロダクト（任意） 
 
 
 ### 独自開発技術（Hack Dayで開発したもの）
