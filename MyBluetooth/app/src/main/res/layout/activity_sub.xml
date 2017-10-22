@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#aaaaff"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Merry X'mas"
+        android:textSize="50sp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/smellButton"
+        android:text="Smell check"
+        android:textSize="30sp"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/urlJumpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_margin="20dp"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/black"
+        android:text="connect someone"
+        />
+
+    <Button
+        android:id="@+id/webRTCButton"
+        android:text="Lecture"
+        android:textSize="30sp"
+        android:layout_margin="20dp"
+        android:background="@android:color/holo_red_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

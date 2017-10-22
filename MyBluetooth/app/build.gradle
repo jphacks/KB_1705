@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.example.doiken.mybluetooth"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "SKYWAY_API_KEY", "\"${project.property("skywayApiKey")}\""
+            buildConfigField "String", "SKYWAY_HOST", "\"${project.property("skywayHost")}\""
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "SKYWAY_API_KEY", "\"${project.property("skywayApiKey")}\""
+            buildConfigField "String", "SKYWAY_HOST", "\"${project.property("skywayHost")}\""
+
+        }
+    }
+}
+
+dependencies {
+    compile(name: 'SkyWay', ext: 'aar')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
