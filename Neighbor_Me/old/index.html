@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+
+  <title>NoStressCommunication</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <style type="text/css">
+  p.infobox {
+    height: 6.0em;
+    overflow: scroll;
+    border: red 1px dashed;
+    background-color: #fff0f0;
+  }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <p class="infobox" id="chatLogs">
+    <br>
+    <form class="form-inline">
+      <div class="form-group">
+        <!--
+        <label class="roomLabel" for="rooms">部屋：</label>
+        <select class="form-control" id="rooms">
+          <option value="room01">部屋01</option>
+          <option value="room02">部屋02</option>
+        </select>
+        -->
+        <label class="nameLabel" for="msgForm">名前 </label>
+        <input type="text" class="form-control" id="msgForm">
+        <input type="text" class="form-control" id="tagForm">
+        <button  type="submit" class="btn btn-primary" id="sendButton">入室</button>
+
+      </div>
+    </form>
+  </div>
+
+  <script type="text/javascript" src="tink.js"></script> 
+  <script type="text/javascript" src="scaleToWindow.js"></script> 
+  <script type="text/javascript" src="pixi.js"></script> 
+
+  <div id="ground">
+    <script type="text/javascript" src="place.js"></script>
+  </div>
+
+</body>
+</html>

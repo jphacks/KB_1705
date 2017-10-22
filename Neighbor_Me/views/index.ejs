@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <link rel="stylesheet" type="text/css" href="semantic.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="test.js"></script>
+  <script src="semantic.min.js"></script>
+  <script type="text/javascript" src="protect-double-submit.js"></script>
+  <title>Neighbor Me</title>
+  <style>
+    .alert {
+      color: #a94442;
+      background-color: #f2dede;
+      border-color: #ebccd1;
+    }
+  </style>
+</head>
+<body>
+<div class="ui pointing menu four item demo menu">
+  <a class="active red item" data-tab="first"><i class ="home icon"></i></a>
+  <a class="blue item" data-tab="second"><i class ="users icon"></i></a>
+  <a class="green item" data-tab="third"><i class ="talk icon"></i></a>
+  <a class="yello item" data-tab="fourth"><i class ="sign in icon"></i></a>
+</div>
+
+<p>あなたは <%- name%> としてログインしています．</p>
+
+<div class="ui active tab segment" data-tab="first">
+<p id="people"></p>
+<style>
+  var myName = "<%- name%>";
+</style>
+<script src="people.js"></script>
+
+</div>
+</div>
+<!-- end of the First Tab -->
+
+<!-- start of the second tab -->
+<div class="ui tab segment" data-tab="second">
+
+  <!-- personnal ICON start -->
+  <div class="ui people shape">
+  <div class="sides">
+    <div class="active side">
+      <div class="ui card">
+        <div class="image">
+          <img src="trump.jpg">
+        </div>
+        <div class="content">
+          <div class="header" id="personName"></div>
+         <div class="description">I'm party people!!!! </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<!-- personnal Icon end -->
+<!-- divide line here -->
+<h4 class="ui horizontal divider header"><i class="tag icon"></i>Description</h4>
+  <!-- divide line end-->
+  <div class="ui feed">
+
+  <div class="event">
+    <div class="label">
+    </div>
+    <div class="content">
+      <div class="summary">He posted on his page 
+      </div>
+      <div class="extra text"><p id="personTag"></p></div>
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="label">
+    </div>
+    <div class="content">
+      <div class="summary">He posted on his page 
+      </div>
+      <div class="extra text"><p id="personTag2"></p></div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end of the second Tab -->
+
+<!-- start of the third tab -->
+<div class="ui tab segment" data-tab="third">Chat</div>
+<!-- end of the fourth tab -->
+
+<!-- start of the fourth tab -->
+<!-- this is the Login page -->
+<div class="ui tab segment" data-tab="fourth">
+    <% if (locals.errors) { %>
+    <ul class="alert">
+    <%   for (let i = 0; i < errors.length; i++) { %>
+      <li><%= errors[i]%></li>
+    <%   } %>
+    </ul>
+    <% } %>
+    <form method="POST" action="confirm">
+      <div>
+        <label for="name">ニックネーム：</label>
+        <input type="text" id="name" name="name" value="<%= locals.name ? name : ""%>"/>
+      </div>
+      <div>
+        <label for="tag">タグ：</label>
+        <input type="text" id="tag" name="tag" value="<%= locals.tag ? tag : ""%>"/>
+      </div>
+      <div>
+        <label for="tag2">tag：</label>
+        <input type="text" id="tag2" name="tag2" value="<%= locals.tag2 ? tag2 : ""%>" />
+      </div>
+      <div>
+        <input type="submit" value="確認" />
+      </div>
+    </form>
+    <script type="text/javascript" src="protect-double-submit.js"></script>
+  </div>
+  <!-- end of the fourth tab -->
+  </body>
+</html>

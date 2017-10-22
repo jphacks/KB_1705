@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <link rel="stylesheet" type="text/css" href="semantic.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="semantic.min.js"></script>
+    <script type="text/javascript" src="protect-double-submit.js"></script>
+    <title>Neighbor Me</title>
+      <style>
+      .login-title{
+        margin-top: 30px;
+      }
+
+      .register-part h2{
+        text-align: center;
+      }
+
+      .alert {
+        color: #a944
+        background-color: #f2dede;
+        border-color: #ebccd1;
+      }
+      </style>
+  </head>
+  <body>
+  <div class = "login-title">
+  <h2 class="ui center aligned icon header"><i class="circular users icon"></i> Neighbor Me </h2>
+  </div>
+  <h4 class="ui horizontal divider header"><i class="favorite icon"></i></h4>
+  <div class = "register-part">
+
+    <% if (locals.errors) { %>
+    <ul class="alert">
+    <%   for (let i = 0; i < errors.length; i++) { %>
+      <li><%= errors[i]%></li>
+    <%   } %>
+    </ul>
+    <% } %>
+
+     <!--modified form start here-->
+     <div class="ui centered grid container">
+     <div class="fifteen wide column">
+     <div class="ui fluid card">
+       <div class="content">
+       <form class="ui form" method="POST" action="confirm">
+          <div class="field">
+            <label for="name">Account Name</label>
+        <input type="text" id="name" name="name" value="<%= locals.name ? name : ""%>"/>
+          </div>
+          <div class="field">
+            <label for="tag">Tag</label>
+        <input type="text" id="tag" name="tag" value="<%= locals.tag ? tag : ""%>"/>
+          </div>
+          <div class="field">
+            <label for="tag2">Tag2</label>
+        <input type="text" id="tag2" name="tag2" value="<%= locals.tag ? tag : ""%>"/>
+          </div>
+          <button class="ui primary labeled icon button" type="submit">
+            <i class="circle icon"></i>
+            Submit
+          </button>
+    </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

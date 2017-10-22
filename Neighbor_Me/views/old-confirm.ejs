@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <title>confirm</title>
+    <style>
+      input[readonly] {
+        background-color: #eee;
+        color: #555;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>confirm</h1>
+    <form id="form" method="POST" action="">
+      <div>
+        <span>ニックネーム：</span>
+        <input type="text" id="name" name="name" value="<%= name%>" readonly />
+      </div>
+      <div>
+        <span>タグ：</span>
+        <input type="text" id="tag" name="tag" value="<%= tag%>" readonly />
+      </div>
+      <div>
+        <span>tag：</span>
+        <input type="text" id="tag2" name="tag2" value="<%= tag2%>" readonly />
+      </div>
+      <div>
+        <input type="button" id="btn-back" value="戻る" />
+        <input type="submit" id="btn-regist" value="登録" />
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="protect-double-submit.js"></script>
+    <script type="text/javascript" src="confirm.js"></script>
+  </body>
+</html>

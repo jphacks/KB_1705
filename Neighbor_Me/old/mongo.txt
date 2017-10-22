@@ -1,0 +1,27 @@
+//登録
+var user = new User( {name: '777', x: x, y: y, tags: ["444", "dd"]} );
+user.save(function(err){
+  if(err) {console.log(err);}
+});
+
+//検索and取得
+User.find({}, function(err, results){
+  for(let i=0; i<results.length; i++){
+    console.log(results[i].name);
+  }
+});
+  
+//要素の更新
+User.update({ name: '555'}, {$push: {tags: '666666'} }, function(err){
+  if(err) throw err;
+});
+
+//要素の削除
+User.update({ name: '555'}, {$pop: {tags: '666666'} }, function(err){
+  if(err) throw err;
+});
+
+//消去
+User.remove({ name: 'dd' }, function(err, result){
+  if(err) throw err;
+});
