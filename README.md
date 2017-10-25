@@ -1,6 +1,6 @@
 # コミュSHOW
 
-[![Product Name](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/_fIvt16P6AI)
+[![Product Name](https://youtu.be/_fIvt16P6AI)](https://youtu.be/_fIvt16P6AI)
 
 ## 製品概要
 CommunicationxTech
