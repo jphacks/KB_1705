@@ -1,6 +1,6 @@
 # コミュSHOW
 
-[![Product Name](https://youtu.be/_fIvt16P6AI)](https://youtu.be/_fIvt16P6AI)
+[![Product Name](https://raw.githubusercontent.com/jphacks/KB_1705/master/presentation.JPG)](https://youtu.be/_fIvt16P6AI)
 
 ## 製品概要
 CommunicationxTech
